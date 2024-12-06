@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preconnecting to Google Fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Linking to Google Fonts for the Roboto font family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linking to external CSS file for styling -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <section>
+      <!-- Main heading of the password generator -->
+      <h1 class="heading">🔒 Password Generator 🔒</h1>
+
+      <!-- Input field to display generated password, set to read-only -->
+      <input
+        class="result"
+        id="result"
+        type="text"
+        readonly
+        placeholder="CLICK HERE TO COPY"
+      />
+      <!-- Paragraph to display clipboard status messages -->
+      <p class="clipboard" id="clipboard"></p>
+
+      <!-- Display for password length -->
+      <p class="length">LENGTH <span id="value">4</span></p>
+
+      <!-- Range input to select password length -->
+      <div class="range-box">
+        <span class="text">4</span>
+        <input
+          type="range"
+          class="rangeInput"
+          id="rangeInput"
+          min="4"
+          max="24"
+          value="4"
+        />
+        <span class="text">24</span>
+      </div>
+
+      <!-- Settings section for password character options -->
+      <p class="setting">SETTING</p>
+
+      <!-- Checkbox to include lowercase letters in the password -->
+      <div class="btn-box">
+        <span>Include Small Letters</span>
+        <label class="switch">
+          <input type="checkbox" id="lowercase" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- Checkbox to include uppercase letters in the password -->
+      <div class="btn-box">
+        <span>Include Capital Letters</span>
+        <label class="switch">
+          <input type="checkbox" id="uppercase" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- Checkbox to include numbers in the password -->
+      <div class="btn-box">
+        <span>Include Numbers</span>
+        <label class="switch">
+          <input type="checkbox" id="number" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- Checkbox to include symbols in the password -->
+      <div class="btn-box">
+        <span>Include Symbols</span>
+        <label class="switch">
+          <input type="checkbox" id="symbol" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <!-- Button to generate the password -->
+      <button class="btn" id="btn">Generate Password</button>
+    </section>
+
+    <!-- Linking to external JavaScript file for functionality -->
+    <script src="script.js"></script>
+  </body>
+</html>

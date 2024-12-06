@@ -1,0 +1,221 @@
+/* Apply default margin, padding, and box-sizing to all elements, and set the font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Style the body to center content, set background color and text color */
+body {
+  background: #3baea0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Set the base font size for the HTML element */
+html {
+  font-size: 10px;
+}
+
+/* Style for the section containing the password generator */
+section {
+  background-color: #0a0e31;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 38rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/* Style for the main heading */
+section .heading {
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 1rem 0rem;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Style for the secondary heading */
+section .heading2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Style for the input field displaying the generated password */
+section .result {
+  text-align: center;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 2.4rem;
+  padding: 2rem 0.5rem;
+  background-color: #1c2141;
+  margin-bottom: 0.4rem;
+  border-radius: 0.2rem;
+  color: #fff;
+}
+
+/* Style for the clipboard message */
+section .clipboard {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-size: 1.3rem;
+}
+
+/* Style for the password length display */
+section .length {
+  font-size: 1.5rem;
+  color: #929aab;
+  margin-block: 2rem 0.4rem;
+}
+
+/* Style for the length value */
+section .length span {
+  color: #fff;
+}
+
+/* Style for the range input container */
+section .range-box {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1.5rem 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #1c2141;
+}
+
+/* Style for the range input */
+section .range-box .rangeInput {
+  width: 100%;
+}
+
+/* Style for the text beside the range input */
+section .range-box .text {
+  font-size: 1.6rem;
+}
+
+/* Style for the settings section */
+section .setting {
+  font-size: 1.5rem;
+  color: #929aab;
+  margin-block: 2rem 0.6rem;
+}
+
+/* Style for the container holding checkboxes and labels */
+section .btn-box {
+  background-color: #1c2141;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0.4rem;
+  margin-bottom: 0.8rem;
+  border-radius: 0.4rem;
+  align-items: center;
+}
+
+/* Style for the checkbox labels */
+section .btn-box span {
+  display: inline-block;
+  font-size: 2.2rem;
+  margin-right: 1rem;
+}
+
+/* Hide default checkbox appearance */
+section .btn-box input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style for the custom switch */
+section .btn-box .switch {
+  position: relative;
+  display: inline-block;
+  width: 5.5rem;
+  height: 2.5rem;
+}
+
+/* Style for the slider in the switch */
+section .btn-box .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 2.5rem;
+}
+
+/* Style for the slider before it's toggled */
+section .btn-box .slider:before {
+  position: absolute;
+  content: "";
+  height: 2.1rem;
+  width: 2.1rem;
+  left: 0.2rem;
+  bottom: 0.2rem;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Style for the slider when the checkbox is checked */
+section .btn-box input:checked + .slider {
+  background-color: #4caf50;
+}
+
+/* Style for the slider before when the checkbox is checked */
+section .btn-box input:checked + .slider:before {
+  transform: translateX(2rem);
+}
+
+/* Style for the generate password button */
+section .btn {
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  background-image: linear-gradient(
+    to right,
+    #4776e6 0%,
+    #8e54e9 51%,
+    #4776e6 100%
+  );
+  border: none;
+  color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-block: 0.5rem;
+}
+
+/* Style for the button when it's active (clicked) */
+section .btn:active {
+  scale: 0.98;
+}
+
+/* Responsive design adjustments for different screen widths */
+@media (max-width: 768px) {
+  html {
+    font-size: 9px;
+  }
+
+  section .result {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 370px) {
+  html {
+    font-size: 8px;
+  }
+}
